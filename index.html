@@ -33,7 +33,7 @@
 
             //Look for a Spark device named "SparkButton"
             for(var i = 0; i < devices.length; i++){
-                if(devices[i].name == "SparkButton"){
+                if(devices[i].name == "Sauna"){
                     deviceID = devices[i].id;
                 }
             }
@@ -52,7 +52,7 @@
             //Call the Spark.function!
             var sendApiRequest = function (v) {
                 console.log('setting lamp to ' + v);
-                spark.callFunction(devices[9].id, 'controller', v, callback);
+                spark.callFunction(deviceID, 'controller', v, callback);
             };
             var _timer = null,
                 lastValue = 0,

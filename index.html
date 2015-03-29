@@ -11,7 +11,18 @@
 
 
     <div style="text-align:center">
-        <input type="text" class="dial" data-min="0" data-max="180" data-fgColor="#00ADEF" data-angleOffset=270 data-angleArc=180 data-linecap=round data-displayInput=false data-width=300 data-height=300>
+        <input type="text" 
+        	   class="dial" 
+        	   data-min="0" 
+        	   data-max="180" 
+        	   data-fgColor="#00ADEF" 
+        	   data-angleOffset=270 
+        	   data-angleArc=180 
+        	   data-linecap=round 
+        	   data-displayInput=false 
+        	   data-width=300 
+        	   data-height=300
+			   data-cursor=true>
     </div>
 
 
@@ -59,7 +70,8 @@
                 minDelta = 10;
 
             //Called when the knob changes
-            var onChange = function (v) {            	
+            var onChange = function (v) {    
+            	v = 180 - v;        	
                 if (_timer) {
                     clearTimeout(_timer);
                 }

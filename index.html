@@ -22,7 +22,8 @@
         	   data-width=300 
         	   data-height=300
 			   data-cursor=true
-			   data-thickness=.2>
+			   data-thickness=.3
+			   rotation="anticlockwise">
     </div>
 
 
@@ -71,7 +72,6 @@
 
             //Called when the knob changes
             var onChange = function (v) {    
-            	v = 180 - v;        	
                 if (_timer) {
                     clearTimeout(_timer);
                 }
